@@ -4,6 +4,7 @@
 const DSC_ENDPOINT_COUNTIES = '/judete';
 const DSC_ENDPOINT_CITIES = '/localitati/%s';
 const DSC_ENDPOINT_AWB_TRACKING_OLD = '/getawb/%s';
+const DSC_ENDPOINT_AWB_TRACKING = '/awb/track/%s';
 const DSC_ENDPOINT_AWB_COST = '/awb/cost';
 const DSC_ENDPOINT_AWB_SEND = '/awb/send';
 const DSC_ENDPOINT_AWB_PDF = '/awb/pdf/%s';

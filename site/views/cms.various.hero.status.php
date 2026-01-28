@@ -73,15 +73,56 @@
 
     <h3 class="h1 mb-5 fw-light ls-wider">DETALII LIVRARE</h3>
 
-    <div class="h3 fw-light">Număr AWB:</div>
-    <div class="h3 mb-5"><?= htmlspecialchars($awbNo) ?></div>
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="rounded-3 px-4 py-4 h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);">
+                <div class="text-white text-opacity-50 text-uppercase small fw-semibold mb-2">Număr AWB</div>
+                <div class="h3 fw-bold mb-0"><?= htmlspecialchars($awbNo) ?></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="rounded-3 px-4 py-4 h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);">
+                <div class="text-white text-opacity-50 text-uppercase small fw-semibold mb-2">Status</div>
+                <div class="h4 fw-bold mb-0 text-danger"><?= $awbInfo['status'] ?></div>
+            </div>
+        </div>
+        <? if ($awbInfo['location']) : ?>
+        <div class="col-md-4">
+            <div class="rounded-3 px-4 py-4 h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);">
+                <div class="text-white text-opacity-50 text-uppercase small fw-semibold mb-2"><span class="icon icon-map-location me-1"></span>Locație</div>
+                <div class="h3 fw-bold mb-0"><?= $awbInfo['location'] ?></div>
+            </div>
+        </div>
+        <? endif; ?>
+    </div>
 
-    <div class="h3 fw-light">Status:</div>
-    <div class="h3 mb-5"><?= $awbInfo['status'] ?></div>
+    <? if (!empty($awbHistory)) : ?>
+        <hr class="my-5 opacity-25" />
 
-    <? if ($awbInfo['location']) : ?>
-        <div class="h3 fw-light">Locatie:</div>
-        <div class="h3 mb-5"><?= $awbInfo['location'] ?></div>
+        <h3 class="h1 mb-5 fw-light ls-wider">ISTORIC LIVRARE</h3>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="position-relative ps-4" style="border-left: 3px solid var(--bs-danger);">
+                    <? foreach ($awbHistory as $index => $event) : ?>
+                        <div class="position-relative mb-4">
+                            <div class="position-absolute bg-danger rounded-circle" style="width: 14px; height: 14px; left: -24.5px; top: 8px; box-shadow: 0 0 0 4px rgba(220,53,69,0.3);"></div>
+                            <div class="rounded-3 px-4 py-3" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); backdrop-filter: blur(10px);">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
+                                    <div>
+                                        <h5 class="fw-bold mb-1 text-white"><?= htmlspecialchars($event['eveniment']) ?></h5>
+                                        <span class="text-white text-opacity-75"><span class="icon icon-map-location me-1"></span><?= htmlspecialchars($event['centru']) ?></span>
+                                    </div>
+                                    <div class="text-danger fw-semibold">
+                                        <?= date('d.m.Y, H:i', strtotime($event['data'])) ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <? endforeach; ?>
+                </div>
+            </div>
+        </div>
     <? endif; ?>
 </div>
 <div class="bg-primary">
