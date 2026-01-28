@@ -83,14 +83,14 @@
         <div class="col-md-4">
             <div class="rounded-3 px-4 py-4 h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);">
                 <div class="text-white text-opacity-50 text-uppercase small fw-semibold mb-2">Status</div>
-                <div class="h4 fw-bold mb-0 text-danger"><?= $awbInfo['status'] ?></div>
+                <div class="h4 fw-bold mb-0 text-danger"><?= htmlspecialchars($awbInfo['status']) ?></div>
             </div>
         </div>
         <? if ($awbInfo['location']) : ?>
         <div class="col-md-4">
             <div class="rounded-3 px-4 py-4 h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);">
                 <div class="text-white text-opacity-50 text-uppercase small fw-semibold mb-2"><span class="icon icon-map-location me-1"></span>Locație</div>
-                <div class="h3 fw-bold mb-0"><?= $awbInfo['location'] ?></div>
+                <div class="h3 fw-bold mb-0"><?= htmlspecialchars($awbInfo['location']) ?></div>
             </div>
         </div>
         <? endif; ?>
