@@ -1,0 +1,38 @@
+# Environment
+env
+
+# Config with credentials
+platform/config/config.php
+platform/config/client_secret.json
+platform/config/*_secret*.json
+
+# Logs
+error.log
+*.log
+
+# Database dumps
+*.sql
+
+# Dependencies (use composer install)
+vendor/
+
+# Uploads (user content)
+public/uploads/*
+!public/uploads/.gitignore
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude local settings
+.claude/

@@ -1,0 +1,2 @@
+<?= parseView(getPage()) ?>
+<? die; ?>

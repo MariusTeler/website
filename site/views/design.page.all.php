@@ -1,0 +1,13 @@
+<?= parseView('design.hero.services') ?>
+<?= parseView('design.box.services.home') ?>
+<?= parseView('design.box.services') ?>
+<?= parseView('design.box.services.details') ?>
+<?= parseView('design.box.business.client') ?>
+<?= parseView('design.box.q.a') ?>
+<?= parseView('design.box.centers') ?>
+<?= parseView('design.box.delivery') ?>
+<?= parseView('design.box.complaint') ?>
+<?= parseView('design.box.delivery.supplies') ?>
+<?= parseView('design.box.contact.text.right') ?>
+<?= parseView('design.box.contact.text.left') ?>
+<?= parseView('design.box.phone.floating') ?>

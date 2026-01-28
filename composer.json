@@ -1,0 +1,14 @@
+{
+  "require": {
+    "facebook/graph-sdk": "^5.7",
+    "google/apiclient": "^2.7",
+    "tijsverkoyen/css-to-inline-styles": "^2.2",
+    "league/oauth2-client": "^2.6",
+    "microsoft/microsoft-graph": "^1.30",
+    "dompdf/dompdf": "^1.0",
+    "phpmailer/phpmailer": "^6.5",
+    "phpoffice/phpspreadsheet": "^1.21",
+    "mobiledetect/mobiledetectlib": "^2.8",
+    "mailjet/mailjet-apiv3-php": "^1.5"
+  }
+}

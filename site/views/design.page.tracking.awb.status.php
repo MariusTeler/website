@@ -1,0 +1,1 @@
+<?= parseView('design.hero.tracking.status') ?>

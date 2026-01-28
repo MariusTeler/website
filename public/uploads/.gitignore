@@ -1,0 +1,6 @@
+/*
+!.gitignore
+!/cms
+/cms/*
+!/cms/images
+/cms/images/*
