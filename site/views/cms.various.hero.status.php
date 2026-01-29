@@ -83,7 +83,7 @@
         <div class="col-md-4">
             <div class="rounded-3 px-4 py-4 h-100" style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);">
                 <div class="text-white text-opacity-50 text-uppercase small fw-semibold mb-2">Status</div>
-                <div class="h4 fw-bold mb-0 text-danger"><?= htmlspecialchars($awbInfo['status']) ?></div>
+                <div class="h4 fw-bold mb-0 text-white"><?= htmlspecialchars($awbInfo['status']) ?></div>
             </div>
         </div>
         <? if ($awbInfo['location']) : ?>
@@ -113,7 +113,7 @@
                                         <h5 class="fw-bold mb-1 text-white"><?= htmlspecialchars($event['eveniment']) ?></h5>
                                         <span class="text-white text-opacity-75"><span class="icon icon-map-location me-1"></span><?= htmlspecialchars($event['centru']) ?></span>
                                     </div>
-                                    <div class="text-danger fw-semibold">
+                                    <div class="fw-semibold text-white">
                                         <?= date('d.m.Y, H:i', strtotime($event['data'])) ?>
                                     </div>
                                 </div>
